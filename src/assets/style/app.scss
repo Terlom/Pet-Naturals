@@ -1,0 +1,28 @@
+body{
+  font-family: Roboto-regular;
+}
+.screen-1{
+  background-image: url("../images/bg_screen1.png");
+}
+header .container{
+  width: 1162px;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+ul{
+  list-style: none;
+}
+nav{
+  //background-image: url("dist/images/bg_screen1.png");
+  ul{
+    display: flex;
+    li{
+      padding-right: 51px;
+      &:last-child{
+        padding-right: 0;
+      }
+    }
+  }
+}
