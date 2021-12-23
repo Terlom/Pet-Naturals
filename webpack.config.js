@@ -1,11 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Require  html-webpack-plugin plugin
 const path = require('path');
 
+
 module.exports = {
-    mode: 'development',
-    entry: __dirname + "/src/index.js", // webpack entry point. Module to start building dependency graph
+    mode: 'production',
+    entry: __dirname + "/src/js/index.js", // webpack entry point. Module to start building dependency graph
     output: {
-        path: __dirname + '/dist', // Folder to store generated bundle
+        path: __dirname + '/docs', // Folder to store generated bundle
         filename: 'bundle.js',  // Name of generated bundle after build
         publicPath: '/' // public URL of the output directory when referenced in a browser
     },
@@ -19,7 +20,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(sass|scss)$/,
+                test: /\.(sass|scss|css)$/,
                 use: [{
                     loader: "style-loader" // creates style nodes from JS strings
                 }, {
@@ -33,7 +34,8 @@ module.exports = {
     plugins: [  // Array of plugins to apply to build chunk
         new HtmlWebpackPlugin({
             template: __dirname + "/src/index.html",
-            inject: 'body'
+            inject: 'body',
+            favicon: "./src/favicon.ico"
         })
     ],
     devServer: {
