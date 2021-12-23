@@ -3,8 +3,8 @@ const path = require('path');
 
 
 module.exports = {
-    mode: 'production',
-    entry: __dirname + "/src/js/index.js", // webpack entry point. Module to start building dependency graph
+    mode: 'development',
+    entry: __dirname + "/src/index.js", // webpack entry point. Module to start building dependency graph
     output: {
         path: __dirname + '/docs', // Folder to store generated bundle
         filename: 'bundle.js',  // Name of generated bundle after build
@@ -12,6 +12,10 @@ module.exports = {
     },
     module: {  // where we defined file patterns and their loaders
         rules: [
+            // {
+            //     test: /\.html$/i,
+            //     use: "html-loader",
+            // },
             {
                 test: /\.js$/,
                 use: 'babel-loader',

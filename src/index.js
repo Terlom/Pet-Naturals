@@ -1,9 +1,10 @@
+// import html from "./index.html";
 import 'normalize.css';
-import '../fonts/index.scss';
-import '../scss/app.scss';
+import './assets/fonts/index.scss';
+import './assets/scss/app.scss';
 import 'jquery/dist/jquery.js';
 import $ from 'jquery';
-import './jquery.maskedinput.min';
+import './assets/js/jquery.maskedinput.min';
 // let sec = 7200;
 // function timer() {
 //     let hours = ~~(sec / 3600);
