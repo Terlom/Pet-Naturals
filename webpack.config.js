@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Require  html-webpack-plugin plugin
 const path = require('path');
 
-
 module.exports = {
     mode: 'development',
     entry: __dirname + "/src/index.js", // webpack entry point. Module to start building dependency graph
@@ -10,12 +9,12 @@ module.exports = {
         filename: 'bundle.js',  // Name of generated bundle after build
         publicPath: '/' // public URL of the output directory when referenced in a browser
     },
-    module: {  // where we defined file patterns and their loaders
+    module: {
         rules: [
-            // {
-            //     test: /\.html$/i,
-            //     use: "html-loader",
-            // },
+            {
+                test: /\.html$/i,
+                use: "html-loader",
+            },
             {
                 test: /\.js$/,
                 use: 'babel-loader',

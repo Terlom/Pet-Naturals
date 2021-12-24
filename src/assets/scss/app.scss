@@ -6,16 +6,13 @@ body{
   font-family: Roboto, sans-serif;;
 }
 h1{
-  margin:0;
   font-weight: 700;
-  font-size: 46px;
-  line-height: 61px;
+  font-size: 40px;
+  line-height: 50px;
   text-align: center;
 }
 ul{
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 .container{
   width: 100%;
@@ -23,7 +20,6 @@ ul{
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   flex-wrap: wrap;
 }
 .content{
@@ -58,6 +54,8 @@ ul{
     position: relative;
   }
   h1{
+    font-size: 35px;
+    line-height: 45px;
     color: #F9E994;
     width: 100%;
     margin: 20px auto 8px;
@@ -158,25 +156,23 @@ nav{
 }
 .orderForm{
   width: 270px;
-  background: #FDFCFC;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px 20px 10px 10px;
+  background: #FDFCFC url("../images/rectangle-form.webp") no-repeat;
+
   .orderForm_header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("../images/rectangle-form.webp");
-    background-position-y: -6px;
     height: 190px;
     padding: 23px 24px 0;
     box-sizing: border-box;
-    position: relative;
-    border-radius: 10px 10px 0 0;
-    .timeLeft{
+    .formTitle{
       font-weight: 700;
       font-size: 33px;
       line-height: 39px;
       margin-bottom: 8px;
+      text-transform: uppercase;
     }
     #timer{
       font-weight: 700;
@@ -267,6 +263,8 @@ nav{
     padding-top: 48px;
   }
   .content{
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-bottom: 100px;
   }
@@ -313,7 +311,7 @@ nav{
     align-items: center;
   }
   h1{
-    padding-top: 8.69%;
+    margin-top: 8.69%;
     margin-bottom: 5.09%;
     color: #537D13;
   }
@@ -334,30 +332,30 @@ nav{
 }
 
 @media screen and (min-width: 1140px){
-  h1{
-    font-size: 52px;
+  body{
+    h1{
+      font-size: 52px;
+      line-height: 61px;
+    }
   }
   .container{
     width: 1140px;
+    margin: 0 auto;
   }
-  .content{
-    flex-direction: row;
-    justify-content: space-between!important;
-    align-items: normal!important;
+  .orderScreen{
+    .content{
+      align-items: normal;
+    }
   }
-
   .product-advantages{
     width: 323px;
   }
   .cats{
     display: block;
     position: absolute;
-    top: 46%;
+    top: 44%;
     left: 21%;
   }
-  .aboutScreen-bg {
-      height: 671px;
-    }
   .resultScreen{
     .content{
       flex-direction: row;
@@ -396,9 +394,7 @@ nav{
       width: 60%;
     }
     .content{
-      display: flex;
-      flex-direction: row!important;
-      justify-content: space-between!important;
+      flex-direction: row;
     }
     .left-side{
       text-align: inherit;
@@ -424,17 +420,8 @@ nav{
     background-image: url("../images/cloud.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
     padding: 41px 54px 38px 77px;
     margin: 0;
-    a{
-      color: #715D00;
-      text-transform: uppercase;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 23px;
-    }
     ul{
       display: flex;
       li{
@@ -447,15 +434,23 @@ nav{
   }
 }
 @media only screen and (min-width: 634px){
-  //test
-  .aboutScreen_item{
-    width: 305px;
-    margin-right: 10px;
-    margin-left: 10px;
+  .orderScreen{
+    h1{
+      font-size: 40px;
+      line-height: 50px;
+    }
   }
-  ///test
-
-.description{
+  .aboutScreen {
+    .content{
+      flex-direction: row;
+    }
+    .aboutScreen_item {
+      width: 305px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+  .description{
   padding: 21px 16px 16px;
 }
   .resultScreen{
